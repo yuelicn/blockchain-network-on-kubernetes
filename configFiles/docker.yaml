@@ -29,8 +29,9 @@ spec:
     spec:
       volumes:
       - name: dockervolume
-        persistentVolumeClaim:
-          claimName: docker-pvc
+        hostPath:
+          path: /data/test
+          type: Directory
       containers:
       - name: docker
         securityContext:
