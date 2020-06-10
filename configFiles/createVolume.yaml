@@ -11,9 +11,9 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteMany
-  hostPath:
-    path: "/tmp"
-
+  nfs:
+    path: "/data/nfs/baas"
+    server: 172.17.73.233
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
